@@ -37,7 +37,7 @@ class ConfigApp
       'estrenosadmin'=>'AdminController#MostrarEstrenosAdmin',
 
       'genero'=> 'PelisController#GenerarGenero',
-        'borrarGenero'=>'AdminController#borrarGenero',
+      'borrarGenero'=>'AdminController#borrarGenero',
 
       'FormularioAgregarGenero'=> 'AdminController#FormularioAgregarGenero',
       'AgregarGenero'=> 'AdminController#AgregarGenero',

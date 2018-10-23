@@ -2,12 +2,14 @@
 
 require_once "../view/PeliculasView.php";
 require_once "../model/PelisModel.php";
+require_once "../model/GeneroModel.php";
 
 
 class PelisController
 {
   private $view;
   private $model;
+  private $GeneroModel;
   private $Titulo;
 
   function __construct()
@@ -15,6 +17,8 @@ class PelisController
     $this->view = new PeliculasView();
     $this->Titulo = "Bienvenido a MisPelis!!";
     $this->model = new PelisModel();
+    $this->GeneroModel = new GeneroModel();
+
   }
 
 function Home(){
@@ -25,22 +29,22 @@ function Home(){
 
 function GenerarGenero($PARAMS){
   $Peliculas = $this->model->GetPeliculasFiltradas($PARAMS);
-  $Generos = $this->model->GetGeneros();
-  $GeneroSeleccionado = $this->model->GetGeneroSeleccionado($PARAMS);
+  $Generos = $this->GeneroModel->GetGeneros();
+  $GeneroSeleccionado = $this->GeneroModel->GetGeneroSeleccionado($PARAMS);
   $this->view->GeneroFiltrado($this->Titulo, $Peliculas, $Generos, $GeneroSeleccionado);
 }
 
 function PeliculaSeleccionada($param){
   $Peliculas = $this->model->MostrarPeliculaAdmin($param[0]);
-  $NombreDeGenero = $this->model->GetNombreDeGeneroDePelicula($param[1]);
-  $Generos = $this->model->GetGeneros();
+  $NombreDeGenero = $this->GeneroModel->GetNombreDeGeneroDePelicula($param[1]);
+  $Generos = $this->GeneroModel->GetGeneros();
   $this->view->MostrarPelicula($this->Titulo, $Peliculas, $Generos, $NombreDeGenero);
 
 }
 
 function MostrarEstrenos(){
   $PeliculasEstrenos = $this->model->BuscarEstrenos();
-  $Generos = $this->model->GetGeneros();
+  $Generos = $this->GeneroModel->GetGeneros();
   $this->view->MostrarEstrenosView($this->Titulo, $PeliculasEstrenos, $Generos);
 }
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-19 01:19:56
+/* Smarty version 3.1.33, created on 2018-10-19 21:26:23
   from 'C:\xampp\htdocs\proyectos\Grupo38-MurilloÁlvaro-MonteroMariano\Peliculas\templates\PeliculaAdmin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bc9151cc8b7d7_13069827',
+  'unifunc' => 'content_5bca2fdf783019_88321785',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eb45880fe1bec064645c24b3fbc0af309eb70e7d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\proyectos\\Grupo38-MurilloÁlvaro-MonteroMariano\\Peliculas\\templates\\PeliculaAdmin.tpl',
-      1 => 1539902723,
+      1 => 1539908605,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:Footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bc9151cc8b7d7_13069827 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bca2fdf783019_88321785 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:HeaderAdmin.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 

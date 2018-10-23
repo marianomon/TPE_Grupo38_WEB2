@@ -2,12 +2,14 @@
 require_once "../view/PeliculasView.php";
 require_once "../model/PelisModel.php";
 require_once "SecuredController.php";
+require_once "../model/GeneroModel.php";
 
 
 class AdminController extends SecuredController
 {
   private $view;
   private $model;
+  private $GeneroModel;
   private $Titulo;
 
   function __construct()
@@ -17,43 +19,43 @@ class AdminController extends SecuredController
     $this->view = new PeliculasView();
     $this->Titulo = "Bienvenido Administrador!!";
     $this->model = new PelisModel();
+    $this->GeneroModel = new GeneroModel();
   }
 
   function PelisAdmin(){
       $Peliculas = $this->model->GetPeliculas();
-      $Generos = $this->model->GetGeneros();
+      $Generos = $this->GeneroModel->GetGeneros();
       $this->view->MostrarAdmin($this->Titulo, $Peliculas, $Generos);
   }
 
   function MostrarPeliculaAdmin($param){
 
     $Peliculas = $this->model->MostrarPeliculaAdmin($param[0]);
-    $Generos = $this->model->GetGeneros();
-    $NombreGeneroDePelicula = $this->model->GetNombreDeGeneroDePelicula($param[1]);
+    $Generos = $this->GeneroModel->GetGeneros();
+    $NombreGeneroDePelicula = $this->GeneroModel->GetNombreDeGeneroDePelicula($param[1]);
     $this->view->MostrarPeliculaAdmin($this->Titulo, $Peliculas, $Generos, $NombreGeneroDePelicula);
   }
 
   function FormularioEditarGenero(){
-  $Generos = $this->model->GetGeneros();
+  $Generos = $this->GeneroModel->GetGeneros();
   $this->view->MostrarFormularioEditarGenero($this->Titulo, $Generos);
-}
+  }
 
-function EditarGenero($id_genero){
-  $nombreEditado = $_POST["EditadoNombreGenero"];
+  function EditarGenero($id_genero){
+    $nombreEditado = $_POST["EditadoNombreGenero"];
+    $this->GeneroModel->ActualizarNombreGenero($nombreEditado, $id_genero);
+  }
 
-  $this->model->ActualizarNombreGenero($nombreEditado, $id_genero);
-}
-
-function borrarGenero($id_genero){
-  $this->model->borrarGenero($id_genero[0]);
-}
+  function borrarGenero($id_genero){
+    $this->GeneroModel->borrarGenero($id_genero[0]);
+  }
 
 
 
   function GenerarGeneroAdmin($PARAMS){
     $Peliculas = $this->model->GetPeliculasFiltradas($PARAMS);
-    $Generos = $this->model->GetGeneros();
-    $GeneroSeleccionado = $this->model->GetGeneroSeleccionado($PARAMS);
+    $Generos = $this->GeneroModel->GetGeneros();
+    $GeneroSeleccionado = $this->GeneroModel->GetGeneroSeleccionado($PARAMS);
     $this->view->GeneroFiltradoAdmin($this->Titulo, $Peliculas, $Generos, $GeneroSeleccionado);
   }
 
@@ -72,8 +74,6 @@ function borrarGenero($id_genero){
     }
     $genero = $_POST["EditadoGenero"];
     $iFrame = $_POST["EditadoiFrame"];
-    // var_dump($iFrame);
-    // die;
     $this->model->ActualizarMovie($ParamPeli[0], $ParamPeli[1], $nombre, $sinopsis, $actores, $iFrame);
 
   }
@@ -111,13 +111,13 @@ function borrarGenero($id_genero){
   }
 
   function FormularioAgregarGenero(){
-    $Generos = $this->model->GetGeneros();
+    $Generos = $this->GeneroModel->GetGeneros();
     $this->view->MostrarFormularioAgregarGenero($this->Titulo, $Generos);
   }
 
   function AgregarGenero(){
     $nombreGenero = $_POST["nombreGenero"];
-    $this->model->AgregarGeneroModel($nombreGenero);
+    $this->GeneroModel->AgregarGeneroModel($nombreGenero);
   }
 }
 
