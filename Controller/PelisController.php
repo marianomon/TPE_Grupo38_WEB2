@@ -23,7 +23,7 @@ class PelisController
 
 function Home(){
     $Peliculas = $this->model->GetPeliculas();
-    $Generos = $this->model->GetGeneros();
+    $Generos = $this->GeneroModel->GetGeneros();
     $this->view->Mostrar($this->Titulo, $Peliculas, $Generos);
 }
 

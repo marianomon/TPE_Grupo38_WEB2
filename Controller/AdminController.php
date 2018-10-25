@@ -43,14 +43,12 @@ class AdminController extends SecuredController
 
   function EditarGenero($id_genero){
     $nombreEditado = $_POST["EditadoNombreGenero"];
-    $this->GeneroModel->ActualizarNombreGenero($nombreEditado, $id_genero);
+    $this->GeneroModel->ActualizarNombreGenero($nombreEditado, $id_genero[0]);
   }
 
   function borrarGenero($id_genero){
     $this->GeneroModel->borrarGenero($id_genero[0]);
   }
-
-
 
   function GenerarGeneroAdmin($PARAMS){
     $Peliculas = $this->model->GetPeliculasFiltradas($PARAMS);

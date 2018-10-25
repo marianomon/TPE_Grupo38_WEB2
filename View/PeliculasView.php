@@ -1,16 +1,14 @@
 <?php
 
 require('libs/Smarty.class.php');
+
 class PeliculasView
 {
   private $Smarty;
+
   function __construct(){
     $this->Smarty = new Smarty();
     $r = $this->Smarty->assign('root', "http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
-
-// var_dump( "http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"])); die();
-
-
   }
 
   function Mostrar($Titulo, $Peliculas, $Generos){
