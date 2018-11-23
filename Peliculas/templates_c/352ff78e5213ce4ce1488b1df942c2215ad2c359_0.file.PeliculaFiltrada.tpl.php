@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-19 01:28:10
+/* Smarty version 3.1.33, created on 2018-11-16 22:36:10
   from 'C:\xampp\htdocs\proyectos\Grupo38-MurilloÁlvaro-MonteroMariano\Peliculas\templates\PeliculaFiltrada.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bc9170a4a8b79_29632298',
+  'unifunc' => 'content_5bef384ab34d86_71643514',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '352ff78e5213ce4ce1488b1df942c2215ad2c359' => 
     array (
       0 => 'C:\\xampp\\htdocs\\proyectos\\Grupo38-MurilloÁlvaro-MonteroMariano\\Peliculas\\templates\\PeliculaFiltrada.tpl',
-      1 => 1539905289,
+      1 => 1542404163,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:Footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bc9170a4a8b79_29632298 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bef384ab34d86_71643514 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -47,6 +47,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['pelicula']->value) {
           <div class="col-2 RecuadroPelicula">
             <a href="<?php echo $_smarty_tpl->tpl_vars['root']->value;?>
 /PeliculaSeleccionada/<?php echo $_smarty_tpl->tpl_vars['pelicula']->value['id_pelicula'];?>
+/<?php echo $_smarty_tpl->tpl_vars['pelicula']->value['id_genero'];?>
 ">
               <img class="imagendepelicula" src="imagenes/<?php echo $_smarty_tpl->tpl_vars['pelicula']->value['id_pelicula'];?>
 .jpg" alt="">

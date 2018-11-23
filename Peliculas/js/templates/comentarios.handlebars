@@ -1,0 +1,67 @@
+{{#each comentarios}}
+  <div class="col-12 FondoGrisMuyClaro Comentario-Box">
+    <div class="nombre_usuario_caja_comentarios">
+      <h4>{{nombre_usuario}} dice:</h4>
+    </div>
+    <div class="FondoGrisMuyClaro LetrasBlancas cuerpo_comentarios">
+      {{cuerpo}}
+    </div>
+    <div class="FondoGrisMuyClaro LetrasBlancas Puntuacion">
+      <span>Puntuacion: {{puntaje}} estrellas</span>
+    </div>
+    <div>
+      {{#if ../admin}}
+      {{!-- {{id_comentario}} --}}
+        <button type="button" value="{{id_comentario}}" class="btBorrar">Borrar Comentario</button>
+      {{/if}}
+    </div>
+  </div>
+{{/each}}
+<br>
+{{#if nombreUserLog}}
+<div class="Caja-Comentar">
+  <p><b>Comentando como: {{nombreUserLog}}</b></p>
+  <textarea name="Comentario-Textarea" id="comment-box" rows="8" cols="80"></textarea>
+  <br>
+  {{!-- Calificacion --}}
+  <h4>Calificación:</h4>
+<form>
+
+  <div class="Estrellas">
+    <input class="Estrellas" type="radio" name="estrella" value="1">
+    <span>1 Estrella</span>
+  </div>
+  <div class="Estrellas">
+    <input class="Estrellas" type="radio" name="estrella" value="2">
+    <span>2 Estrellas</span>
+  </div>
+  <div class="Estrellas">
+    <input class="Estrellas" type="radio" name="estrella" value="3">
+    <span>3 Estrellas</span>
+  </div>
+  <div class="Estrellas">
+    <input class="Estrellas" type="radio" name="estrella" value="4">
+    <span>4 Estrellas</span>
+  </div>
+  <div class="Estrellas">
+    <input class="Estrellas" type="radio" name="estrella" value="5">
+    <span>5 Estrellas</span>
+  </div>
+  <br>
+</form>
+
+
+    <button class="boton_submit" type="button" id="submit-comment">Comentar</button>
+  {{/if}}
+</div>
+{{!--
+{{#each peliculas}}
+  <div class="col-2 RecuadroPelicula">
+    <a href="{$root}/PeliculaSeleccionada/{{id_pelicula}}/{{id_genero}}">
+      <img class="imagendepelicula" src="imagenes/{{id_pelicula}}.jpg"  alt="{{nombre}}">
+    <div class="TituloPelicula">
+      {{nombre}}
+    </div>
+    </a>
+  </div>
+{{/each}} --}}

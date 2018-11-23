@@ -6,6 +6,45 @@
   background-color: rgb(255, 82, 82);
 }
 
+.Caja-Comentar{
+  text-align: left;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.boton_submit{
+  margin-left: 15px;
+}
+
+.Estrellas{
+  display: inline;
+  margin-left: 7px;
+}
+
+.fondoBlanco{
+  background-color: white;
+}
+
+.letrasNegras{
+  color: black;
+}
+
+.nombre_usuario_caja_comentarios{
+  text-align: left;
+}
+
+.cuerpo_comentarios{
+  text-align: left;
+  margin-left: 5px;
+  padding-left: 5px;
+}
+
+.Comentario-Box{
+    padding: 10px;
+    color: white;
+    margin:10px;
+}
+
 .LetrasMedianas{
   font-size: 27px;
   color: rgb(126, 126, 126);
@@ -25,6 +64,10 @@
 
 .fondoGrisClaro{
   background-color: rgb(66, 66, 66);
+}
+
+.FondoGrisMuyClaro{
+  background-color: rgb(77, 77, 77);
 }
 
 .FondoGrisOscuro{

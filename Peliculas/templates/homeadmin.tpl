@@ -9,7 +9,7 @@
               Borrar
             </a>
               <a class="TituloPelicula" href="PeliculaSeleccionadaAdmin/{$pelicula['id_pelicula']}/{$pelicula['id_genero']}">
-                <img class="imagendepelicula" src="imagenes/{$pelicula['id_pelicula']}.jpg" alt="">
+                <img class="imagendepelicula" src="{$pelicula['imagen']}" alt="">
               {$pelicula['nombre']}
             </a>
           </div>

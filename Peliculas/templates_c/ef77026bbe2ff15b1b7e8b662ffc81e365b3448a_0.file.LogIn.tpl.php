@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-19 01:19:48
+/* Smarty version 3.1.33, created on 2018-11-20 19:19:33
   from 'C:\xampp\htdocs\proyectos\Grupo38-MurilloÁlvaro-MonteroMariano\Peliculas\templates\LogIn.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bc915146bbce1_65244154',
+  'unifunc' => 'content_5bf45035536267_70857995',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ef77026bbe2ff15b1b7e8b662ffc81e365b3448a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\proyectos\\Grupo38-MurilloÁlvaro-MonteroMariano\\Peliculas\\templates\\LogIn.tpl',
-      1 => 1539719149,
+      1 => 1542737971,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header.tpl' => 1,
   ),
 ),false)) {
-function content_5bc915146bbce1_65244154 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf45035536267_70857995 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -41,6 +41,7 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
 
           </div>
           <button type="submit" class="btn btn-primary">LogIn</button>
+          <button id="Boton-Registrarse" class="btn btn-primary" type="button" name="button">Registrarse</button>
         </form>
       </div>
     </div>
@@ -55,6 +56,9 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
 >
     <?php echo '<script'; ?>
  src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="js/SecondaryJS.js" type="text/javascript"><?php echo '</script'; ?>
 >
   </body>
 </html>

@@ -1,11 +1,19 @@
 {include file="HeaderAdmin.tpl"}
 
 <div class="container-fluid contenedor FondoGrisOscuro">
+  <input type="hidden" id="nombreUserLog" value="{$NombreUserLogueado}">
+  <input type="hidden" id="idUsuarioLog" value="{$idUsuarioLog}">
+  <input type="hidden" id="esAdmin" value="1">
+
+
   {foreach from=$Peliculas item=pelicula}
-    <form method="post" action="{$root}/ActualizarPelicula/{$pelicula['id_pelicula']}/{$pelicula['id_genero']}" class="FondoGrisOscuro">
+  <input type="hidden" id="id_pelicula" value="{$pelicula['id_pelicula']}">
+    <form method="post" action="{$root}/ActualizarPelicula/{$pelicula['id_pelicula']}/{$pelicula['id_genero']}" enctype="multipart/form-data" class="FondoGrisOscuro">
       <div class="row justify-content-md-center">
       <div class="form-group col-2 padding15px margin-1 fondoGrisClaro">
-        <img class="imagendepelicula padding-bottom" src="{$root}/imagenes/{$pelicula['id_pelicula']}.jpg" alt="">
+        <input type="file" name="EditadoImg" value="">
+        <!-- <img class="imagendepelicula padding-bottom" src="{$root}/imagenes/{$pelicula['id_pelicula']}.jpg" alt=""> -->
+        <img class="imagendepelicula padding-bottom" src="{$pelicula['imagen']}" alt="">
         <textarea class="form-control" aria-label="Nombre" name="EditadoNombre" placeholder="Insertar Nombre de la Pelicula...">{$pelicula['nombre']}</textarea>
         <!-- <input type="input" class="form-control" id="EditadoNombre" name="EditadoNombre" aria-describedby="emailHelp" placeholder="Insertar Nombre de la Pelicula..."> -->
       </div>
@@ -58,5 +66,13 @@
   </div>
   </form>
   {/foreach}
+  <div class="row justify-content-md-center">
+    <div class="col-7 Caja-comentarios fondoGrisClaro LetrasBlancas">
+        <h3>Comentarios:</h3>
+      <div id="contenedor-Comentarios" class="col-9 Caja-comentarios fondoGrisClaro">
+        <!-- aca va el handlebars -->
+      </div>
+    </div>
+  </div>
 </div>
   {include file="Footer.tpl"}

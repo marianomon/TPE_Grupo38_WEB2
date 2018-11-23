@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-19 01:23:07
+/* Smarty version 3.1.33, created on 2018-11-23 00:59:55
   from 'C:\xampp\htdocs\proyectos\Grupo38-MurilloÁlvaro-MonteroMariano\Peliculas\templates\AgregarPelicula.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bc915db870d95_23755343',
+  'unifunc' => 'content_5bf742fbb14630_51690959',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f68bdf84edb2c7c9bb6a0dc344ef221122fe9f22' => 
     array (
       0 => 'C:\\xampp\\htdocs\\proyectos\\Grupo38-MurilloÁlvaro-MonteroMariano\\Peliculas\\templates\\AgregarPelicula.tpl',
-      1 => 1539742578,
+      1 => 1542931192,
       2 => 'file',
     ),
   ),
@@ -22,15 +22,16 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:Footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bc915db870d95_23755343 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf742fbb14630_51690959 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:HeaderAdmin.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="container-fluid FondoGrisOscuro">
   <h1 class="LetrasBlancas">Agregar Pelicula</h1>
   <div class="row justify-content-md-center">
 
-        <form method="post" action="AgregarPelicula" class="col-4 FondoGrisOscuro">
+        <form method="post" action="AgregarPelicula" enctype="multipart/form-data" class="col-4 FondoGrisOscuro">
           <div class="form-group padding15px">
+            <input type="file" name="EditadoImg" value="">
             <input type="input" class="form-control" id="nombre" name="nombre" aria-describedby="emailHelp" placeholder="Insertar Nombre de la Pelicula...">
           </div>
           <div class="input-group mb-3">

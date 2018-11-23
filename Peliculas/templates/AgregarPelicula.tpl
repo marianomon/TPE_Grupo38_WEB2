@@ -3,8 +3,9 @@
   <h1 class="LetrasBlancas">Agregar Pelicula</h1>
   <div class="row justify-content-md-center">
 
-        <form method="post" action="AgregarPelicula" class="col-4 FondoGrisOscuro">
+        <form method="post" action="AgregarPelicula" enctype="multipart/form-data" class="col-4 FondoGrisOscuro">
           <div class="form-group padding15px">
+            <input type="file" name="EditadoImg" value="">
             <input type="input" class="form-control" id="nombre" name="nombre" aria-describedby="emailHelp" placeholder="Insertar Nombre de la Pelicula...">
           </div>
           <div class="input-group mb-3">
